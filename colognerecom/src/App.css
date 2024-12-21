@@ -1,0 +1,35 @@
+.mainappcontainer {
+  width: 500px;
+  height: auto; /* Ensure it adjusts to content height */
+  display: flex;
+  align-items: center;    /* Center vertically */
+  position: absolute; /* Positioning to center relative to the viewport */
+  top: 10%;
+  left: 50%;
+  flex-direction: column; /* Arrange children vertically */
+  transform: translate(-50%, -50%); /* Shift to truly center */
+}
+
+.textbox {
+  position: relative;
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.titlecontainer {
+  display: flex;
+  justify-content: flex-start; /* Align horizontally to the start (left) */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Ensure it spans the width of the mainappcontainer */
+  height: 100px;
+}
+
+
+.titletext {
+  font-family: 'Brush Script MT', cursive; /* Primary font and fallback */
+  font-size: 60px; /* Adjust the size to fit the style */
+  font-weight: normal; /* Avoid bolding as Brush Script is naturally stylized */
+  color: #333; /* Optional: Change text color */
+}
+
