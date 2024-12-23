@@ -42,12 +42,20 @@
   color: white; /* Optional: Change text color */
 }
 
-.subtitlecontainer{
+.subtitlecontainer {
   display: flex;
-  justify-content: flex-start; /* Align horizontally to the start (left) */
-  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align vertically to the top */
+  align-items: flex-start; /* Align horizontally to the start (left) */
   width: 100%; /* Ensure it spans the width of the mainappcontainer */
-  height: 30px;
+  height: auto; /* Adjust height to fit content */
+}
+
+.subtitletext {
+  font-size: 25px; /* Adjust the size to fit the style */
+  font-weight: normal; /* Avoid bolding as Brush Script is naturally stylized */
+  color: #a5a5a5; /* Optional: Change text color */
+  margin: 5px 0; /* Add some spacing between each subtitle */
 }
 
 .subtitletext{
@@ -94,8 +102,4 @@
   width: 60px; /* Adjust width automatically based on content */
   opacity: 0.3;
   transition: opacity 0.3s ease-in-out;
-}
-
-.imgs:hover {
-  opacity: 1;
 }

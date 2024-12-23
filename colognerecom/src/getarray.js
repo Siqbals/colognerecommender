@@ -1,5 +1,15 @@
 export async function getCologneArray(cologneName) {
-    console.log("func entered")
+    if (cologneName === null) {
+        return [
+            [0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0, 0],
+            [0]
+        ]
+    }
+
+    console.log("cologne passed thru is: ", cologneName)
     try {
         const response = await fetch('http://localhost:5000/get-cologne-array', {
             method: 'POST',
@@ -14,7 +24,8 @@ export async function getCologneArray(cologneName) {
         }
 
         const data = await response.json();
-        return data.array
+        console.log(data)
+        return data.array;
     } catch (error) {
         console.error('Error fetching cologne array:', error);
     }
