@@ -9,11 +9,10 @@ function Durations(props) {
     if (carr && carr[index] === 1) {
       return {
         opacity: 1,
-        fontWeight: 'bold', // Add boldness if true
+        color: 'black'
       };
     } else {
       return {
-        opacity: 0.3,
         fontWeight: 'normal',
       };
     }

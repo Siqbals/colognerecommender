@@ -8,6 +8,7 @@ import Occasions from './Occasions';
 import Durations from './durations';
 import Notes from './notes';
 import Overallrank from './overallrank';
+import Description from './description.js';
 import { getCologneArray } from './getarray.js';
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
         <Durations carr={inparr[2]} />
         <Notes carr={inparr[3]} />
         <Overallrank carr={inparr[4]} />
+        <Description carr={inparr[5]} ></Description>
       </div>
     </div>
   );

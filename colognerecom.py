@@ -16,7 +16,7 @@ def get_cologne_array():
         return jsonify({"error": "cologne_name is required"}), 400
 
     client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
-    message_content = f"""for a cologne called {cologne_name}, please output an array where 0 is for false, and 1 is for true, each index should be a subarray for index 5 you may use any number to represent how popular it is
+    message_content = f"""for a cologne called {cologne_name}, please output an array where 0 is for false, and 1 is for true, each index should be a subarray for index 5 you may use any number to represent how popular it is 
     index 1:
     winter
     summer
@@ -41,7 +41,11 @@ def get_cologne_array():
     floral
 
     index 5:
-    any number that will determine how popular it is
+    any number that will determine its overall rating, on a scale of 1 to 100, 100 being best and 1 being worst
+
+   index 6:
+   provide a short description of the cologne
+
 
 ONLY OUTPUT THE ARRAY AND NOTHING ELSE
 OUTPUT THE ARRAY AS AN ARRAY DATATYPE
