@@ -5,7 +5,8 @@ from flask_cors import CORS
 from openai import OpenAI
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "https://colognestat.netlify.app"}})
+
 
 @app.route('/get-cologne-array', methods=['POST'])
 def get_cologne_array():
