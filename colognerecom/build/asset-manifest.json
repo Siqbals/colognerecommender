@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ea79fa07.css",
+    "main.js": "/static/js/main.09df7729.js",
+    "static/js/488.e8407743.chunk.js": "/static/js/488.e8407743.chunk.js",
+    "static/media/work.png": "/static/media/work.26d739004974765aab7b.png",
+    "static/media/datenight.png": "/static/media/datenight.dd11d0ed3bb088ec7070.png",
+    "static/media/sweet.png": "/static/media/sweet.6d652462522fc84fa0bf.png",
+    "static/media/gourmand.png": "/static/media/gourmand.7004af9dfbe3aee4e4fe.png",
+    "static/media/special.png": "/static/media/special.c641d9005e5ac4520161.png",
+    "static/media/nightout.png": "/static/media/nightout.3b6813cc2b14e7245253.png",
+    "static/media/snowflake-png.png": "/static/media/snowflake-png.e936ca03494ee913bfa8.png",
+    "static/media/floral.png": "/static/media/floral.621fdcafc017cdc48dad.png",
+    "static/media/sun.png": "/static/media/sun.5e9edd07b7c660235cfe.png",
+    "static/media/spicy.png": "/static/media/spicy.a0920d0e2e665401d10a.png",
+    "static/media/gym.png": "/static/media/gym.0735cb82703e945ff44e.png",
+    "static/media/everyday.png": "/static/media/everyday.93b9bce8aca727c93c2d.png",
+    "index.html": "/index.html",
+    "main.ea79fa07.css.map": "/static/css/main.ea79fa07.css.map",
+    "main.09df7729.js.map": "/static/js/main.09df7729.js.map",
+    "488.e8407743.chunk.js.map": "/static/js/488.e8407743.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea79fa07.css",
+    "static/js/main.09df7729.js"
+  ]
+}
