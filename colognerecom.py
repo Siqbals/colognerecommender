@@ -5,11 +5,16 @@ from flask_cors import CORS
 from openai import OpenAI
 
 app = Flask(__name__)
-CORS(app)
 
+# Allow all origins and all HTTP methods
+CORS(app, origins="*", methods=["GET", "POST", "OPTIONS", "DELETE"])
 
-@app.route('/get-cologne-array',methods=['GET', 'POST', 'DELETE', 'OPTIONS'])
+@app.route('/get-cologne-array', methods=['POST', 'OPTIONS'])
 def get_cologne_array():
+    if request.method == 'OPTIONS':
+        # Pre-flight request - respond with status 200 and appropriate headers
+        return jsonify({'message': 'CORS preflight successful'}), 200
+
     data = request.json
     cologne_name = data.get("cologne_name")
     
@@ -53,19 +58,14 @@ OUTPUT THE ARRAY AS AN ARRAY DATATYPE
     """
     try:
         chat_completion = client.chat.completions.create(
-            messages=[
-                {
-                    "role": "user",
-                    "content": message_content,
-                }
-            ],
+            messages=[{
+                "role": "user",
+                "content": message_content,
+            }],
             model="gpt-4o",
         )
         
-        # Extract the content of the completion
         raw_response = chat_completion.choices[0].message.content
-        
-        # Clean the response by removing backticks and parsing as JSON
         cleaned_response = raw_response.strip().strip('```json').strip('```')
         array = json.loads(cleaned_response)
         
