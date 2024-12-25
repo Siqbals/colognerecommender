@@ -5,10 +5,15 @@ from flask_cors import CORS
 from openai import OpenAI
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://colognestat.netlify.app"}})
+@app.after_request
+def add_headers(response):
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    response.headers.add("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS")
+    response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With")
+    return response
 
 
-@app.route('/get-cologne-array', methods=['POST'])
+@app.route('/get-cologne-array',methods=['GET', 'POST', 'DELETE', 'OPTIONS'])
 def get_cologne_array():
     data = request.json
     cologne_name = data.get("cologne_name")
