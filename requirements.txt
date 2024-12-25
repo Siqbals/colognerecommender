@@ -1,0 +1,5 @@
+flask
+CORS
+OpenAI
+flask_cors
+gunicorn
