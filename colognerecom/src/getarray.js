@@ -11,7 +11,7 @@ export async function getCologneArray(cologneName) {
 
     console.log("cologne passed thru is: ", cologneName)
     try {
-        const response = await fetch('http://localhost:5000/get-cologne-array', {
+        const response = await fetch('https://cologne-recommender-backend.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
