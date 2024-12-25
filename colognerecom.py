@@ -5,7 +5,7 @@ from flask_cors import CORS
 from openai import OpenAI
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/get-cologne-array', methods=['POST'])
 def get_cologne_array():
